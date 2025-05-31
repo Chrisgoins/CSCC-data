@@ -1,0 +1,13 @@
+!mkdir -p ../data ../figures
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+data = pd.DataFrame({
+    'radius_kpc': np.logspace(0, 2, 20),
+    'density_cscc': 5*np.logspace(0, 2, 20)**(-0.5),
+    'density_lcdm': 8*np.logspace(0, 2, 20)**(-1)
+})
+data.to_csv('../data/halo_profiles.csv', index=False)
+Visualization (paste the full plotting code from above)
+[...]
+```
