@@ -1,2 +1,2 @@
-git clone https://github.com/ChrisGoins/CSCC-data.git
-cd CSCC-data
+CSCC V2 is now officially archived on Zenodo. You can access the dataset here:  
+Zenodo DOI: https://doi.org/10.5281/zenodo.15579101
