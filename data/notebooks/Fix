@@ -1,13 +1,20 @@
-!mkdir -p ../data ../figures
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-data = pd.DataFrame({
-    'radius_kpc': np.logspace(0, 2, 20),
-    'density_cscc': 5*np.logspace(0, 2, 20)**(-0.5),
-    'density_lcdm': 8*np.logspace(0, 2, 20)**(-1)
-})
-data.to_csv('../data/halo_profiles.csv', index=False)
-Visualization (paste the full plotting code from above)
-[...]
-```
+import os  
+import numpy as np  
+import pandas as pd  
+import matplotlib.pyplot as plt  
+
+# Create necessary directories  
+os.makedirs(os.path.join("..", "data"), exist_ok=True)  
+os.makedirs(os.path.join("..", "figures"), exist_ok=True)  
+
+# Generate dataset with improved column labels  
+data = pd.DataFrame({  
+    'radius_kpc': np.logspace(0, 2, 20),  
+    'density_cscc_Msun_per_kpc3': 5 * np.logspace(0, 2, 20)**(-0.5),  
+    'density_lcdm_Msun_per_kpc3': 8 * np.logspace(0, 2, 20)**(-1)  
+})  
+
+# Save dataset with flexible file paths  
+data.to_csv(os.path.join("..", "data", "halo_profiles.csv"), index=False)  
+
+# **Optional Visualization (Drop Your Plotting Code Here for Refinements)**
