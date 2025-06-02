@@ -1,6 +1,2 @@
-# CSCC Data Repository
-Contains supporting files for the Cosmic Static Cling Cosmology paper.
-
-## Quick Access
-- [Data Folder](./data)
-- [Notebooks](./notebooks)
+git clone https://github.com/ChrisGoins/CSCC-data.git
+cd CSCC-data
