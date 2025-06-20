@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EchoIQ</title>
-  <style>
-@keyframes blink {
-  0%, 90%, 100% { transform: scaleY(1); }
-  91% { transform: scaleY(0.05); }
-  99% { transform: scaleY(1); }
+  <div style="position: relative; display: inline-block;">
+  <img src="echo-eye.png" alt="Echo Eye" style="height: 60px;">
+  <div class="eyelid"></div>
+</div>
+
+<style>
+.eyelid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0c0c0c;
+  transform: scaleY(0);
+  transform-origin: top;
+  animation: blink 5s infinite;
+  pointer-events: none;
 }
 
-.blinking-eye {
-  animation: blink 5s infinite;
-  transform-origin: center center;
-  transition: transform 0.3s ease;
+@keyframes blink {
+  0%, 90%, 100% { transform: scaleY(0); }
+  91% { transform: scaleY(1); }
+  99% { transform: scaleY(0); }
 }
+</style>
 </style>
 body {
       background: #0c0c0c;
